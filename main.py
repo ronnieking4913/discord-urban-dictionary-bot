@@ -89,7 +89,8 @@ async def remove_braces(remove_string):
 async def create_message(response_from_urban_dictionary, word_to_define = ''):
     if len(word_to_define) == 0:
         word = await remove_braces(response_from_urban_dictionary['word'])
-    word = word_to_define
+    else:
+        word = word_to_define
     definition = await remove_braces(response_from_urban_dictionary['definition'])
     example = await remove_braces(response_from_urban_dictionary['example'])
 
